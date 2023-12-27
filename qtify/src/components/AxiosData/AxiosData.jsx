@@ -12,7 +12,7 @@ export const getUId = () => {
  */
 export const topAlbumData = async () => {
     try {
-        let res = await axios.get(`${BackEndPoint}albums/new`);
+        let res = await axios.get(`${BackEndPoint}albums/top`);
         // console.log(res)
         return res.data;
     } catch (e) {
@@ -27,7 +27,7 @@ export const topAlbumData = async () => {
  */
 export const newAlbumData = async () => {
     try {
-        let res = await axios.get(`${BackEndPoint}albums/top`);
+        let res = await axios.get(`${BackEndPoint}albums/new`);
         return res.data;
     } catch (e) {
         console.log(`error from AxiosData Component ->`, e);
