@@ -7,13 +7,21 @@ function CarouselLeftNavigation(){
    const swiper = useSwiper();
    const [isBeginning,setIsBeginning] =useState(swiper ?swiper.isBeginning : true);
 
-   useEffect(() => {
+   
+  useEffect(() => {
+    const handleSlideChange = () => {
+      setIsBeginning(swiper.isBeginning);
+    };
+
     if (swiper) {
-        swiper.on("slideChange", function () {
-            setIsBeginning(swiper.isBeginning);
-        });
+      swiper.on("slideChange", handleSlideChange);
+
+      // Cleanup the event listener when component unmounts
+      return () => {
+        swiper.off("slideChange", handleSlideChange);
+      };
     }
-}, [swiper]);
+  }, [swiper]);
 
    return(
     <div className={styles.leftNavigation}>
