@@ -9,7 +9,10 @@ function CarouselLeftNavigation(){
 
    
   useEffect(() => {
+    console.log("Swiper instance:", swiper);
+
     const handleSlideChange = () => {
+      console.log("Slide change event triggered");
       setIsBeginning(swiper.isBeginning);
     };
 
@@ -18,6 +21,7 @@ function CarouselLeftNavigation(){
 
       // Cleanup the event listener when component unmounts
       return () => {
+        console.log("Cleanup");
         swiper.off("slideChange", handleSlideChange);
       };
     }

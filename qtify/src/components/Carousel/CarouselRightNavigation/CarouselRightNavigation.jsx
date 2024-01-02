@@ -9,7 +9,10 @@ function CarouselRightNavigation(){
    const [isEnd,setIsEnd] =useState(swiper? swiper.isEnd : true);
 
    useEffect(() => {
+    console.log("Swiper instance:", swiper);
+
     const handleSlideChange = () => {
+      console.log("Slide change event triggered");
       setIsEnd(swiper.isEnd);
     };
 
@@ -18,6 +21,7 @@ function CarouselRightNavigation(){
 
       // Cleanup the event listener when component unmounts
       return () => {
+        console.log("Cleanup");
         swiper.off("slideChange", handleSlideChange);
       };
     }
