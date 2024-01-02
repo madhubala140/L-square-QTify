@@ -5,11 +5,15 @@ import { useSwiper } from "swiper/react";
 
 
 function CarouselRightNavigation(){
-   const swiper = useSwiper();
+    it('should verify if the first two albums are not visible after clicking the slider\'s next button 4 times')
+        const swiper = useSwiper();
    const [isEnd,setIsEnd] =useState(swiper? swiper.isEnd : true);
 
    useEffect(() => {
     console.log("Swiper instance:", swiper);
+    console.log('Is first album visible:', /* Logic to check if the first album is visible */);
+  console.log('Is second album visible:', /* Logic to check if the second album is visible */);
+
 
     const handleSlideChange = () => {
       console.log("Slide change event triggered");
