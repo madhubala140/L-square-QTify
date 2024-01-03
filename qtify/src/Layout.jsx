@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "./Components/NavBar/NavBar";
-import HeroSection from "./Components/HeroSection/HeroSection";
-import TopAlbum from "./Components/topAlbum/TopAlbum";
-import NewAlbum from "./Components/newAlbum/NewAlbum";
+import NavBar from "./components/NavBar/NavBar";
+import HeroSection from "./components/HeroSection/HeroSection";
+import TopAlbum from "./components/topAlbum/TopAlbum"
+import NewAlbum from "./components/newAlbum/NewAlbum";
 import "./Layout.css";
 const Layout = () => {
     return (
