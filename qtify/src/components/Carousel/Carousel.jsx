@@ -28,6 +28,7 @@ function Carousel({data,renderComponent}) {
       modules={[Navigation]}
       spaceBetween={40}
       slidesPerView={"auto"}
+      allowTouchMove
       
     >
         <Controls data={data} />
