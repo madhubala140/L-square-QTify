@@ -15,8 +15,9 @@ const Layout = () => {
         <TopAlbum />
         <NewAlbum />
         <Songs/>
-        <AudioPlayer />
         <Faqs />
+        <AudioPlayer />
+        
         </div>
         );
         }
