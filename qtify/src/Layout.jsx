@@ -6,6 +6,7 @@ import NewAlbum from "./components/newAlbum/NewAlbum";
 import "./Layout.css";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 import Songs from "./components/Songs/Songs";
+import Faqs from "./components/Faqs/Faqs";
 const Layout = () => {
     return (
       <div className="layout">
@@ -15,6 +16,7 @@ const Layout = () => {
         <NewAlbum />
         <Songs/>
         <AudioPlayer />
+        <Faqs />
         </div>
         );
         }
